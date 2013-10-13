@@ -1,0 +1,51 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1> Before javascript </h1>
+		<script type="text/javascript">
+			function testPrimitiveType() {
+				var strVar = "wangpei";
+				var numVar = 66;
+				var objVar = new Object();
+				var nullVar = null;
+				var undefinedVar;
+
+				//alert("hello");
+				alert("strVar is a " + typeof strVar);//string
+				alert("numVar is a " + typeof numVar);//number
+				alert("objVar is a " + typeof objVar);//object
+				alert("nullVar is a " + typeof nullVar);//object
+				alert("undefinedVar is a " + typeof undefinedVar);//undefined
+
+			}
+
+			function testReferenceType() {
+				var arrRef = new Array();
+				var regexRef = new RegExp("^1");
+				var anyRef = new Object();
+
+				alert("Hello");
+
+				// should surround "arrRef instaceof Array" with ()
+				// otherwise it concats arrRef with "Is arrRef an array?"
+				// hmm..when in doubt, use ()
+				alert("Is arrRef an array? " + (arrRef instanceof Array));//true
+				alert("Is regexRef an regular expression? " + (regexRef instanceof RegExp));//true
+				alert("Is anyRef an Object ? " + (anyRef instanceof Object));//true
+				alert("Is 1234 an Object ? " + (1234 instanceof Object));//primitive type, trivially false
+				alert("Is \"abc\" an Object ? " + ("abc" instanceof Object));//primitive type, trivially false
+				alert("Is true an Object ? " + (true instanceof Object));//primitive type, trivially false
+				alert("Is false an Object ? " + (false instanceof Object));//primitive type, trivially false
+
+			}
+
+			testPrimitiveType();
+			testReferenceType();
+
+		</script>
+
+
+		<h1> After javascript </h1>
+	</body>
+</html>
