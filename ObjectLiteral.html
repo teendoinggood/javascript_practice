@@ -1,0 +1,28 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h2>    Before javascript </h2>
+		<script type="text/javascript">
+			function testObjectLiteral(args) {
+				alert("args.name=" + args.name);
+				alert("args.age=" + args.age);//undefined for Object with name "hello"
+
+				alert("args[name]=" + args["name"]);
+				alert("args[age]=" + args["age"]);
+				//[] notation is the same as . notation
+
+			}
+			
+			testObjectLiteral({
+					name: "wangpei",
+					age: 20
+					});
+			testObjectLiteral({
+					name: "hello"
+					});
+
+		</script>
+		<h2>    After javascript </h2>
+	</body>
+</html>
